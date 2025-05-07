@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>INGINIX PROJECT </title>
+  <style>
+    :root {
+      --primary-color: #1e3a8a;
+      --accent-color: #2563eb;
+      --bg-color: #f9fafb;
+      --text-color: #111827;
+      --header-bg: rgba(255, 255, 255, 0.95);
+      --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: var(--header-bg);
+      box-shadow: var(--shadow);
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1em;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-container h1 {
+      margin: 0;
+      color: var(--primary-color);
+    }
+
+    nav a {
+      margin: 0 1em;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent-color);
+    }
+
+    section {
+      padding: 4em 1em;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      margin-bottom: 0.5em;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      justify-content: center;
+    }
+
+    .projects img {
+      width: 100%;
+      max-width: 250px;
+      border-radius: 8px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .projects img:hover {
+      transform: scale(1.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+    }
+
+    form input, form textarea {
+      padding: 0.75em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    form button {
+      padding: 0.75em;
+      background: var(--accent-color);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    form button:hover {
+      background: var(--primary-color);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em 1em;
+      background: #e5e7eb;
+      color: #6b7280;
+    }
+
+    @media (max-width: 600px) {
+      .nav-container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 1em;
+      }
+
+      nav a {
+        display: block;
+        margin: 0.5em 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <h1>My Portfolio</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home">
+    <h2>Welcome! a simple portfolio Showing Nginx</h2>
+    <p>This project demonstrates how to build and deploy a secure and scalable web application using modern web technologies. A simple webpage is served by Node.js, containerized using Docker, and deployed behind an Nginx reverse proxy. The proxy not only balances load between multiple backend containers but also secures communication with HTTPS using a self-signed TLS certificate. This setup mimics real-world web infrastructure, providing a strong foundation for production-ready deployments.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p> My focus is on making web development faster, easier, and more accessible for all developers. I'm currently expanding into DevOps to strengthen my full-stack skills and build seamless, scalable web applications from end to end.</p>
+    <p></p>
+  </section>
+
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="projects">
+      <img src="images/smararo(1).jpg" alt="Project 1">
+      <img src="images/vanc.jpg" alt="Project 2">
+      <img src="images/starlab.jpg" alt="Project 3">
+      <img src="images/quiz app.jpg" alt="Project 4">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
