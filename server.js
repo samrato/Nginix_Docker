@@ -21,7 +21,7 @@ app.use('/',(req,res)=>{
 
 app.listen(PORT, async () => {
   try {
-    console.log(`server is listening on ${PORT}`);
+    console.log(`$ is listening on ${PORT}`);
   } catch (err) {
     console.log("Failed to listen ", err);
   }
