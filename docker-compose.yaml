@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  app1:
+    build: .
+    environment:
+      - APP_NAME=app1
+    ports:
+      - "3000:3001"
+    
